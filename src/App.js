@@ -1,30 +1,24 @@
-import { useEffect, useState } from "react";
+import Range from "./Range"
 
 function App() {
-  const [name, setName] = useState("");
+  // const [number, setNumber] = useState(0);
 
-  useEffect(function () {
-    localStorage.getItem('name');
-  }, []); // -> empty array.
+  // function onIncrease() {
+  //   localStorage.setItem('number', number + 1);
+  //   setNumber(number + 1);
+  // }
 
-  function onNameChange({ target }) {
-    localStorage.setItem('name', target.value);
-    setName(target.value);
-  }
-
-  function onNameClear() {
-    localStorage.removeItem('name')
-    setName("");
-  }
-
+  // function onDecrease() {
+  //   setNumber(number - 1);
+  // }
   return (
     <div className="App">
-      <input type="text" value={name}
-        placeholder="Type number"
-        onChange={onNameChange} />
-      <span>Your number {name}</span>
-      <button onClick={onNameClear}>Clear</button>
+      {/* <button onClick={onIncrease}>+</button>
+      {number}
+      <button onClick={onDecrease}>-</button> */}
+      <Range/>
     </div>
   );
 }
+
 export default App;
