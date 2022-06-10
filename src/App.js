@@ -20,9 +20,9 @@ function App() {
   return (
     <div className="App">
       <input type="text" value={name}
-        placeholder="Your name"
+        placeholder="Type number"
         onChange={onNameChange} />
-      <span>Your name is {name}</span>
+      <span>Your number {name}</span>
       <button onClick={onNameClear}>Clear</button>
     </div>
   );
