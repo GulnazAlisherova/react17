@@ -3,17 +3,22 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [name, setName] = useState("");
-  useEffect(function(){
+  useEffect(function () {
     setName(localStorage.getItem('name'));
-  }), 
+  }, []);
 
-  setName(localStorage.getItem('name'));
+    setName(localStorage.getItem('name'));
 
   function onNameChange({ target }) {
-    //create
+    //create/update
     localStorage.setItem('name', target.value);
-
     setName(target.name);
+  }
+
+  function onNameClear() {
+    //delete
+    localStorage.removeItem('name');
+    setName("");
   }
   return (
     <div className="App">
@@ -23,6 +28,7 @@ function App() {
         onChange={onNameChange}
       />
       <span>Your name is {name}</span>
+      <button onClick={onNameClear}>Clear</button>
     </div>
   );
 }
