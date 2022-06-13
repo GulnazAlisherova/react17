@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+//rotate scew scale border-radius todolist->localstorage
 function Range() {
   const [angle, setAngle] = useState(100);
   function onAngleChange ({ target }) {
@@ -9,9 +10,9 @@ function Range() {
   const styles = {
     width: "200px",
     height: "200px",
-    backgroundColor: "tomato",
+    backgroundColor: "lightgreen",
     transform: `rotate(${angle}deg)`,
-    transition: '1s all ease-in',
+    transition: '1.5s all ease-in',
   }
   return (
     <div className="Range">
