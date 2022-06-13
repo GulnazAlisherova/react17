@@ -39,37 +39,38 @@ function App() {
     backgroundColor: "lightgreen",
     margin: " 50px",
     transform: `rotate(${angle}deg)`,
-   
+
   };
+
   const styles2 = {
     width: "200px",
     height: "200px",
     backgroundColor: "lightgreen",
     margin: " 50px",
-   
+
     transform: `skew(${skew}deg)`,
-  
+
   };
   const styles3 = {
     width: "200px",
     height: "200px",
     backgroundColor: "lightgreen",
     margin: " 50px",
-  
+
     transform: `scale(${scale})`,
-   
+
   };
   const styles4 = {
     width: "200px",
     height: "200px",
     backgroundColor: "lightgreen",
     margin: " 50px",
-   
+
     borderRadius: `${border}%`,
   };
   return (
     <div className="App">
-      <div style={{ marginBottom: "100px" }}></div>
+      <div style={{ marginBottom: "50px" }}></div>
       <input
         type="range"
         min="0"
@@ -78,7 +79,7 @@ function App() {
         onChange={onAngleChange}
       />
       <div style={styles}></div>
-      <div style={{ marginBottom: "100px" }}></div>
+      <div style={{ marginBottom: "50px" }}></div>
       <input
         type="range"
         min="0"
@@ -87,18 +88,16 @@ function App() {
         onChange={onSkewChange}
       />
       <div style={styles2}></div>
-      <div style={{ marginBottom: "100px" }}></div>
-
+      <div style={{ marginBottom: "50px" }}></div>
       <input
         type="range"
         min="1"
         max="1.5"
         value={scale}
-        onChange={onScaleChange} 
-        
+        onChange={onScaleChange}
       />
       <div style={styles3}></div>
-      <div style={{ marginBottom: "100px" }}></div>
+      <div style={{ marginBottom: "50px" }}></div>
       <input
         type="range"
         min="1"
@@ -106,10 +105,11 @@ function App() {
         value={border}
         onChange={onBorderChange}
       />
+
       <div style={styles4}></div>
 
-    
     </div>
+
   );
 }
 
